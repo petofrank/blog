@@ -47,11 +47,10 @@ class PostController extends AbstractController
 
     /**
      * @param Request $request
-     * @param EntityManagerInterface $entityManager
      * @return Response
      */
     #[Route('/new', name: 'app_post_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request): Response
     {
         $form = $this->createForm(PostType::class);
         $form->handleRequest($request);

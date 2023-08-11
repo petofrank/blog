@@ -13,8 +13,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
-
-
 # Set the working directory inside the container to /var/www
 WORKDIR /var/www
 

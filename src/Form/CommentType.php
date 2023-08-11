@@ -5,6 +5,7 @@ namespace App\Form;
 use App\DTO\CommentDTO;
 use App\Entity\Author;
 use App\Entity\Post;
+use DateTime;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -39,7 +40,7 @@ class CommentType extends AbstractType
         $resolver->setDefaults([
             'data_class' => CommentDTO::class,
             'empty_data' => function (FormInterface $form) {
-                    return new CommentDTO("", new \DateTime(), new Post(), new Author());
+                    return new CommentDTO("", new DateTime(), new Post(), new Author());
             }
         ]);
     }

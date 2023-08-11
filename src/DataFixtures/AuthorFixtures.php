@@ -6,16 +6,24 @@ use App\Entity\Author;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
+use Faker\Generator;
 
 class AuthorFixtures extends Fixture
 {
-    protected $faker;
+    /**
+     * @var Generator
+     */
+    protected Generator $faker;
 
     public function __construct()
     {
         $this->faker = Factory::create();
     }
 
+    /**
+     * @param ObjectManager $manager
+     * @return void
+     */
     public function load(ObjectManager $manager): void
     {
          for($i = 0; $i< 10; $i++) {

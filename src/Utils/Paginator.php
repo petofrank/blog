@@ -11,22 +11,22 @@ class Paginator
     /**
      * @var integer
      */
-    private $total;
+    private int $total;
 
     /**
      * @var integer
      */
-    private $lastPage;
+    private int $lastPage;
 
-    private $items;
+    private mixed $items;
 
     /**
-     * @param QueryBuilder|Query $query
+     * @param Query $query
      * @param int $page
      * @param int $limit
      * @return Paginator
      */
-    public function paginate($query, int $page = 1, int $limit = 3): Paginator
+    public function paginate(Query $query, int $page = 1, int $limit = 3): Paginator
     {
         $paginator = new OrmPaginator($query);
 
@@ -42,16 +42,25 @@ class Paginator
         return $this;
     }
 
+    /**
+     * @return int
+     */
     public function getTotal(): int
     {
         return $this->total;
     }
 
+    /**
+     * @return int
+     */
     public function getLastPage(): int
     {
         return $this->lastPage;
     }
 
+    /**
+     * @return mixed
+     */
     public function getItems()
     {
         return $this->items;
