@@ -33,13 +33,13 @@ _________
     - Step 5: `php bin/console doctrine:fixtures:load`
 <br/>
 -  Notes: 
-  - database can be accessed locally from using localhost as host name 
-  - Pagination is set to 3 elements per page
-  - there are no fixtures for comments and posts
+      - database can be accessed locally from using localhost as host name 
+      - Pagination is set to 3 elements per page
+      - there are no fixtures for comments and posts
 <br/>
 -  Possible improvements:
-  - migrations
-  - gitignore
-  - translations
+      - migrations
+      - gitignore
+      - translations
   - authorization & authorization
   - ...
