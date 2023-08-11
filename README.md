@@ -34,7 +34,7 @@ _________
 
 
 -  Notes: 
-    - database can be accessed locally from using localhost as host name 
+    - database can be accessed locally from host machine using localhost as host name 
     - Pagination is set to 3 elements per page
     - there are no fixtures for comments and posts
  
