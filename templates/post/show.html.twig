@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+    <!-- Blog detail page with title, content, date, an overview of comments with content, author with email and date -->
+    <h1>Post</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>{{ post.content }}</td>
+                <td>{{ post.date }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% include 'comment/index.html.twig' with {'comments': post.comments} %}
+
+    <a class="btn btn-secondary btn-sm square" role="button" href="{{ path('app_post_index') }}">back to list</a>
+{% endblock %}

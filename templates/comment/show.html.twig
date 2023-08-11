@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <tr>
+        <td>{{ comment.content }}</td>
+        <td>{{ comment.author.name }}</td>
+        <td>{{ comment.author.email }}</td>
+        <td>{{ comment.date }}</td>
+    </tr>
+{% endblock %}
