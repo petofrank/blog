@@ -6,8 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - .:/var/www:delegated
+#    volumes:
+#      - .:/var/www:delegated
     ports:
       - "9001:9000"
     networks:
