@@ -3,7 +3,6 @@
 namespace App\Utils;
 
 use Doctrine\ORM\Query;
-use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\Paginator as OrmPaginator;
 
 class Paginator
@@ -61,7 +60,7 @@ class Paginator
     /**
      * @return mixed
      */
-    public function getItems()
+    public function getItems(): mixed
     {
         return $this->items;
     }
