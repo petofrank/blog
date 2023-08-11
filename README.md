@@ -31,4 +31,8 @@ _________
     - Step 3: `docker exec -it app_server /bin/bash`
     - Step 4: `php bin/console doctrine:schema:update --force`
     - Step 5: `php bin/console doctrine:fixtures:load`
-- 
+
+-  Notes: 
+  - database can be accessed locally from using localhost as host name 
+  - Pagination is set to 3 elements per page
+  - there are no fixtures for comments and posts
