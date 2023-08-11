@@ -31,6 +31,7 @@ _________
     - Step 3: `docker exec -it app_server /bin/bash`
     - Step 4: `php bin/console doctrine:schema:update --force`
     - Step 5: `php bin/console doctrine:fixtures:load`
+    - Step 6: `http://localhost:8080/`
 
 
 -  Notes: 
